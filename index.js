@@ -17,6 +17,12 @@ const questions = [
     name: "description",
     message: "Provide a brief description of the functionality and purpose of the project",
   },
+
+  {
+    type: "input",
+    name: "GitHub",
+    message: "add the github username associated with this project",
+  },
   
   {
     type: "input",
@@ -36,6 +42,7 @@ const questions = [
     name: "technologies",
     message: "State the technologies or languages being used for this project",
   },
+
 ];
 
 // function to write README file
