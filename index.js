@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const { log } = require("console");
 
 // Array of questions for user
 const questions = [ 
@@ -20,14 +21,20 @@ const questions = [
 
   {
     type: "input",
-    name: "GitHub",
-    message: "add the github username associated with this project",
+    name: "table of contents",
+    message: "add your table of contents",
   },
-  
+
   {
     type: "input",
-    name: "contributors",
-    message: "List any contributors who have worked on this project",
+    name: "installation",
+    message: "enter an installation guide for this project",
+  },
+
+  {
+    type: "input",
+    name: "usage",
+    message: "State the technologies or languages being used for this project",
   },
 
   {
@@ -39,9 +46,23 @@ const questions = [
 
   {
     type: "input",
-    name: "technologies",
-    message: "State the technologies or languages being used for this project",
+    name: "contributing",
+    message: "List any contributors who have worked on this project",
   },
+
+
+  {
+    type: "input",
+    name: "tests",
+    message: "enter a guide on tests if neccesary",
+  },
+
+  {
+    type: "input",
+    name: "questions",
+    message: "enter your GitHub username",
+  },
+
 
 ];
 
@@ -52,9 +73,12 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-  inquirer.prompt(questions).then
-
+  inquirer.prompt(questions).then((responses) => {
+    console.log("Generating README.md file...");
+    writeToFile("./dist/README.md", generateMarkdown({...responses}));
+  });
 }
+
 
 // function call to initialize program
 init();
