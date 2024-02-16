@@ -17,6 +17,12 @@ const questions = [
     name: "description",
     message: "Provide a brief description of the functionality and purpose of the project",
   },
+  
+  {
+    type: "input",
+    name: "contributors",
+    message: "List any contributors who have worked on this project",
+  },
 
   {
     type: "input",
@@ -34,10 +40,12 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(),fileName), data);
 }
 
 // function to initialize program
 function init() {
+  inquirer.prompt(questions).then
 
 }
 
