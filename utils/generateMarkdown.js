@@ -6,9 +6,6 @@ function generateLicenseBadge(license) {
     return '';
   }
 
-  
-
-
 
 
 // function to generate markdown for README
@@ -30,7 +27,7 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## Contributors
-${data.contributors}
+${data.contributing}
 ## Tests
 ${data.tests}
 ## Questions
