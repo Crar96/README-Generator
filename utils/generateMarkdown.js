@@ -42,7 +42,8 @@ ${data.contributing}
 ## Tests
 ${data.tests}
 ## Questions
-* GitHub - [${data.questions}]https://github.com${data.questions}
+* GitHub - [${data.questionsgit}]https://github.com/${data.questionsgit}
+* Email - [${data.questionsemail}]
 ${createLicenseSection(data.license)}
 `;
 }
