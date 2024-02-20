@@ -1,10 +1,18 @@
 
 function generateLicenseBadge(license) {
-  if (license !== 'none') {
+  if (license !== "none") {
     return '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
   }
     return '';
   }
+
+function createLicenseSection(license) {
+  if (license !== "none") {
+    return `## License
+      Licensed under the ${license} license`;
+  }
+  return "";
+}
 
 
 
@@ -17,6 +25,7 @@ ${generateLicenseBadge(data.license)}
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+* [License](#license)
 * [Contributors](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -26,12 +35,15 @@ ${data.description}
 ${data.installation}
 ## Usage
 ${data.usage}
+## Licenses
+${data.license}
 ## Contributors
 ${data.contributing}
 ## Tests
 ${data.tests}
 ## Questions
 ${data.questions}
+${createLicenseSection(data.license)}
 `;
 }
 

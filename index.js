@@ -21,12 +21,6 @@ const questions = [
 
   {
     type: "input",
-    name: "table of contents",
-    message: "add your table of contents",
-  },
-
-  {
-    type: "input",
     name: "installation",
     message: "enter an installation guide for this project",
   },
@@ -38,10 +32,10 @@ const questions = [
   },
 
   {
-    type: "input",
+    type: "list",
     name: "license",
     message: "Select a license to be used for this project",
-    choices: ["MIT", "Apache 2.0", "ISC", "BSD 3-Clause", "BSD 2-Clause", "None"],
+    choices: ["MIT", "Apache 2.0", "ISC", "BSD 3-Clause", "BSD 2-Clause", "none"],
   },
 
   {
