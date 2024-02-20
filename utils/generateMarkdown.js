@@ -42,7 +42,7 @@ ${data.contributing}
 ## Tests
 ${data.tests}
 ## Questions
-${data.questions}
+* GitHub - [${data.questions}]https://github.com${data.questions}
 ${createLicenseSection(data.license)}
 `;
 }
