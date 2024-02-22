@@ -76,7 +76,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((responses) => {
     console.log("Generating README.md file...");
-    writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
+    writeToFile("./dist/README.md", generateMarkdown({...responses}));
   });
 }
 

@@ -1,4 +1,4 @@
-# gwgwrgwg
+# README Generator
 by undefined
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ## Table of contents
@@ -9,18 +9,18 @@ by undefined
 * [Contributors](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
-## Description 
-wrgwrfwf
+## Description
+README GENERATOR STUFF
 ## Installation
-wrgwrwg
+download files and execute in command line node index.js
 ## Usage
-gweff
+Javascript, Node/inquirer, Markdown, JSON
 ## Licenses
 MIT
 ## Contributors
-gwrgf
+Conor Grogan
 ## Tests
-egefg
+N/A
 ## Questions
-* GitHub - [gwrgrg]https://github.com/gwrgrg
-* Email - [wegwfwsgw]
+* GitHub - [Crar96]https://github.com/Crar96
+* Email - [123test.com]
