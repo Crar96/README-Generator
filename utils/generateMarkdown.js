@@ -1,7 +1,7 @@
 
 function generateLicenseBadge(license) {
   if (license !== "none") {
-    return '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
+    return `[![License: ${license}](https://img.shields.io/badge/license-${encodeURIComponent(license)}-blue.svg)](https://opensource.org/licenses/${encodeURIComponent(license)})`;
   }
     return '';
   }
@@ -9,7 +9,7 @@ function generateLicenseBadge(license) {
 function createLicenseSection(license) {
   if (license !== "none") {
     return `## License
-      Licensed under the ${license} license`;
+      Licensed under the [${license}](https://opensource.org/licenses/${encodeURIComponent(license)}) license`;
   }
   return "";
 }
@@ -21,7 +21,7 @@ function generateMarkdown(data) {
   return `# ${data.title}
 by ${data.name}
 ${generateLicenseBadge(data.license)}
-## table of contents
+## Table of contents
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -44,7 +44,6 @@ ${data.tests}
 ## Questions
 * GitHub - [${data.questionsgit}]https://github.com/${data.questionsgit}
 * Email - [${data.questionsemail}]
-${createLicenseSection(data.license)}
 `;
 }
 
